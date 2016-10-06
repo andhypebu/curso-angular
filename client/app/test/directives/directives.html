@@ -28,6 +28,82 @@
        <li>3</li>
     </ul>
 </div>
+<!--Not a good practice, calling a one function-->
+<!--<div ng-switch="vm.message">-->
+    <div ng-switch="vm.user.access">
+    <div ng-switch-when="admin">
+        I'm an Admin!
+    </div>
+     <div ng-switch-when="user">
+        I'm an User!
+    </div>
+     <div ng-switch-when="author">
+        I'm an Author!
+    </div>
+     <div ng-switch-default="default">
+        Default code
+    </div>
+
+</div>
+
+<div >
+    <!--<p>{{vm.message}}</p>-->
+    <p ng-bind = "vm.message"></p>
+
+</div>
+
+<!--Invocando a una directiva Personalizada ya creada-->
+
+<my-input> </my-input> <!--Como un elemento-->
+
+<div my-input=""></div><!--Como un atributo-->
+
+<div class="my-input"></div><!--Como un atributo-->
+
+<!--FILTROS ANGULAR-->
+<div>
+    <input type="text" ng-model="vm.timeNow">
+    Today's date: {{vm.timeNow}}
+    <p> Today's date: {{vm.timeNow | date:'dd-MM-yyyy HH:mm:ss'}}</p>
+</div>
+
+<div>
+    <pre>{{vm.myObject | json}}</pre>
+</div>
+
+
+<div>
+    <input type="number" ng-model="vm.price">
+    <p> Price in $: {{vm.price|currency}}</p>
+    <p> Price in Bs: {{vm.price|currency:'Bs.'}}</p><!--Personalizando el tipo de moneda-->
+    <p> Price in Bs: {{vm.price|currency:'Bs.':0}}</p><!--Personalizando la cantidad de decimales a mostrar-->
+</div>
+
+
+<div>
+   
+    <ul>
+         <!--Permite limitar la cantidad dde informacion a mostrar-->
+        <li ng-repeat="user in vm.users | limitTo:2" >
+            {{user}}
+        </li>
+
+    </ul>
+</div>
+
+<div>
+    
+    {{vm.message | myFilter:'M'}}
+</div>
+<div>
+   Filtered: {{vm.filtered}}
+</div>
+<div>
+   Date Filtered: {{vm.dateFiltered}}
+</div>
+
+
+
 
 
 
