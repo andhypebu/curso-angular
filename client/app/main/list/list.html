@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <uib-tabset active="vmList.selected.index" justified="true">
     <uib-tab ng-repeat="tab in vmList.tabs" 
      heading="{{tab.title}}"
@@ -5,3 +6,12 @@
     <div ui-view=""></div>
     </uib-tab>
   </uib-tabset>
+=======
+<uib-tabset justified="true" active="vmList.selected.index">
+  <uib-tab ng-repeat="tab in vmList.tabs"
+           heading="{{tab.title}}"
+           select="vmList.select(tab.index)">
+    <div ui-view=""></div>
+  </uib-tab>
+</uib-tabset>
+>>>>>>> c7378431224d7e3c55badb1a36fddebdd28eba36

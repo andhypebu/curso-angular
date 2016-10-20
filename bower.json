@@ -13,7 +13,12 @@
     "font-awesome": ">=4.1.0",
     "lodash": "~2.4.1",
     "angular-ui-router": "~0.2.15",
+<<<<<<< HEAD
     "ng-table": "1.0.0"
+=======
+    "ng-table": "1.0.0",
+    "ng-lodash": "^0.5.0"
+>>>>>>> c7378431224d7e3c55badb1a36fddebdd28eba36
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

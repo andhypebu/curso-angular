@@ -7,10 +7,11 @@ angular.module('uiApp')
     vm.message = 'success';
     // vm.showMenu = true;
     vm.show = true;
-    vm.showMenu = function(){
+    vm.showMenu = function () {
       vm.show = !vm.show;
       return vm.show;
     };
+<<<<<<< HEAD
     vm.user = {
       access:'admin'
     };
@@ -29,4 +30,30 @@ angular.module('uiApp')
 
     vm.filtered = $filter('myFilter')(vm.message,'M');
     vm.dateFiltered = $filter('date')(vm.timeNow, 'dd-MM-yyyy HH:mm:ss','+0400');
+=======
+
+    vm.user = {
+      access: 'admin'
+    };
+
+    vm.getAccess = function () {
+      return vm.message;
+    }
+
+    vm.timeNow = new Date();
+    vm.myObject = {
+      name: 'Juan',
+      age: 25
+    };
+
+    vm.price = 50;
+    vm.filtered =
+      $filter('myFilter')(vm.message, 'M');
+    vm.dateFiltered =
+      $filter('date')(vm.timeNow,
+        'dd-MMMM-yyyy HH:mm:ss',
+        '+0400');
+
+
+>>>>>>> c7378431224d7e3c55badb1a36fddebdd28eba36
   });

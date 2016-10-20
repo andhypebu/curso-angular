@@ -1,8 +1,17 @@
 <table ng-table="vmAngular.tableParams" class="table" show-filter="true">
+<<<<<<< HEAD
     <tr ng-repeat="user in $data">
         <td title="'Name'" filter="{name:'text'}" sortable="'name'">
             {{user.name}}</td>
          <td title="'Age'" filter="{age:'number'}" sortable="'age'">
                 {{user.age}}</td>
     </tr>
+=======
+  <tr ng-repeat="user in $data">
+    <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+      {{user.name}}</td>
+    <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+      {{user.age}}</td>
+  </tr>
+>>>>>>> c7378431224d7e3c55badb1a36fddebdd28eba36
 </table>
